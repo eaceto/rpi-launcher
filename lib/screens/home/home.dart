@@ -1,5 +1,5 @@
 import 'package:eaceto_rpi_springboard/widgets/home/status_bar/status_bar.dart';
-import 'package:eaceto_rpi_springboard/widgets/home/today/dock.dart';
+import 'package:eaceto_rpi_springboard/widgets/home/today/today.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -21,18 +21,7 @@ class HomeState extends State {
   void drawerApps() async {}
 
   void navigateScreen() async {
-    setState(() {
-      sidebarOpacity = 0.30;
-    });
 
-    //var app = await Navigator.of(context)
-    //    .push(RouteAnimator.createRoute(apps, sortType));
-
-    setState(() {
-      //apps = app[0];
-      //sortType = app[1];
-      sidebarOpacity = 1;
-    });
   }
 
   @override
