@@ -1,5 +1,5 @@
-import 'package:eaceto_rpi_springboard/widgets/home/dock/dock.dart';
 import 'package:eaceto_rpi_springboard/widgets/home/status_bar/status_bar.dart';
+import 'package:eaceto_rpi_springboard/widgets/home/today/today.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -20,21 +20,7 @@ class HomeState extends State {
 
   void drawerApps() async {}
 
-  void navigateScreen() async {
-    setState(() {
-      sidebarOpacity = 0.30;
-    });
-
-    //var app = await Navigator.of(context)
-    //    .push(RouteAnimator.createRoute(apps, sortType));
-
-    setState(() {
-      //apps = app[0];
-      //sortType = app[1];
-      sidebarOpacity = 1;
-    });
-
-  }
+  void navigateScreen() async {}
 
   @override
   void initState() {
@@ -50,16 +36,16 @@ class HomeState extends State {
         drawer: Opacity(
           opacity: sidebarOpacity,
           child: SafeArea(
-            child: SpringBoardDockWidget(),
+            child: SpringBoardTodayWidget(),
           ),
         ),
         body: Container(
           key: scaffoldKey,
           decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage("assets/images/desktop_background.png"),
-                fit: BoxFit.cover,
-              ),
+            image: DecorationImage(
+              image: AssetImage("assets/images/bigsur_default_wallpaper.png"),
+              fit: BoxFit.cover,
+            ),
           ),
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
