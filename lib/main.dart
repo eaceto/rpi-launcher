@@ -1,3 +1,4 @@
+import 'package:eaceto_rpi_springboard/colours/cupertino_colors.dart';
 import 'package:eaceto_rpi_springboard/routes/routes.dart';
 import 'package:flutter/material.dart';
 
@@ -9,23 +10,25 @@ class SpringBoardApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'RPiSpringBoard',
-      theme: ThemeData(
-        primarySwatch: Colors.pink,
-        accentColor: Colors.white,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      darkTheme: ThemeData(
-        brightness: Brightness.dark,
-        primarySwatch: Colors.pink,
-        accentColor: Colors.white,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.light,
-      initialRoute: Routes.initialScreen(),
-      routes: Routes.routes()
-    );
+        title: 'RPiSpringBoard',
+        theme: ThemeData(
+          brightness: Brightness.light,
+          primarySwatch: CupertinoColours.black,
+          accentColor: CupertinoColours.blackAccent,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+          textTheme: CupertinoColours.textTheme,
+        ),
+        darkTheme: ThemeData(
+          brightness: Brightness.dark,
+          primarySwatch: CupertinoColours.black,
+          accentColor: CupertinoColours.blackAccent,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+          textTheme: CupertinoColours.textTheme,
+        ),
+        debugShowCheckedModeBanner: false,
+        themeMode: ThemeMode.light,
+        initialRoute: Routes.initialScreen(),
+        routes: Routes.routes());
   }
 }
 
