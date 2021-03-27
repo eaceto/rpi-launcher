@@ -20,9 +20,7 @@ class HomeState extends State {
 
   void drawerApps() async {}
 
-  void navigateScreen() async {
-
-  }
+  void navigateScreen() async {}
 
   @override
   void initState() {

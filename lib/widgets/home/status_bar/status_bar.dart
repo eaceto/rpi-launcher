@@ -30,7 +30,7 @@ class _SpringBoardStatusBarWidgetState
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.black.withOpacity(0.8),
+      color: Colors.black.withOpacity(0.6),
       height: 32.0,
       width: MediaQuery.of(context).size.width,
       child: Row(
@@ -43,7 +43,7 @@ class _SpringBoardStatusBarWidgetState
             ),
             child: Text(
               formatTimeStamp(this.timestamp),
-              style: TextStyle(fontSize: 18.0),
+              style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
             ),
           ),
           Spacer(),

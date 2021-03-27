@@ -26,6 +26,7 @@ class SpringBoardApp extends StatelessWidget {
           textTheme: CupertinoColours.textTheme,
         ),
         debugShowCheckedModeBanner: false,
+        debugShowMaterialGrid: false,
         themeMode: ThemeMode.light,
         initialRoute: Routes.initialScreen(),
         routes: Routes.routes());
