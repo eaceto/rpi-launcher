@@ -40,12 +40,8 @@ class SpringBoardTodayWidget extends StatelessWidget {
               crossAxisCount: 2,
               crossAxisSpacing: 16,
               mainAxisSpacing: 16,
-              collectGarbage: (List<int> garbages) {
-
-              },
-              viewportBuilder: (int firstIndex, int lastIndex) {
-
-              },
+              collectGarbage: (List<int> garbages) {},
+              viewportBuilder: (int firstIndex, int lastIndex) {},
             ),
             itemBuilder: (BuildContext c, int index) {
               if (index <= 1 || index >= itemsCount + 2) {

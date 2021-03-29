@@ -10,24 +10,23 @@ class SpringBoardTodayClockWidget extends StatefulWidget {
 class _SpringBoardTodayClockWidgetState
     extends State<SpringBoardTodayClockWidget> {
   @override
-
   Widget build(BuildContext context) {
     return ConstrainedBox(
-        constraints: new BoxConstraints(
+      constraints: new BoxConstraints(
         minHeight: SpringBoardTodayWidget.singleWidgetWidth,
         minWidth: 0,
         maxWidth: SpringBoardTodayWidget.singleWidgetWidth,
-    ),
-    child: Container(
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(24)),
-          backgroundBlendMode: BlendMode.colorBurn,
-          color: Colors.grey),
-      child: Padding(
-        padding: EdgeInsets.all(
-          24,
-        ),
-        child: Column(
+      ),
+      child: Container(
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(24)),
+            backgroundBlendMode: BlendMode.colorBurn,
+            color: Colors.grey),
+        child: Padding(
+          padding: EdgeInsets.all(
+            24,
+          ),
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -57,8 +56,9 @@ class _SpringBoardTodayClockWidgetState
               ),
             ],
           ),
+        ),
       ),
-    ),);
+    );
   }
 
   /*

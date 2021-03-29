@@ -1,3 +1,4 @@
+import 'package:eaceto_rpi_springboard/widgets/home/dock/dock.dart';
 import 'package:eaceto_rpi_springboard/widgets/home/status_bar/status_bar.dart';
 import 'package:eaceto_rpi_springboard/widgets/home/today/today.dart';
 import 'package:flutter/material.dart';
@@ -53,6 +54,10 @@ class HomeState extends State {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               SpringBoardStatusBarWidget(),
+              
+              Spacer(),
+              
+              SpringBoardDockWidget()
             ],
           ),
         ),
