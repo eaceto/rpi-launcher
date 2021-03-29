@@ -1,4 +1,4 @@
-import 'package:eaceto_rpi_springboard/widgets/home/today/clock/today_clock.dart';
+import 'package:eaceto_rpi_springboard/widgets/home/today/calendar/today_calendar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:waterfall_flow/waterfall_flow.dart';
@@ -21,6 +21,7 @@ class SpringBoardTodayWidget extends StatelessWidget {
   static const cellGrey = Color(0xffcfd4e0);
   static const cellBlue = Color(0xff1553be);
   static const background = Color(0xff242830);
+  static const itemsCount = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +48,7 @@ class SpringBoardTodayWidget extends StatelessWidget {
               },
             ),
             itemBuilder: (BuildContext c, int index) {
-              if (index <= 1 || index >= 12) {
+              if (index <= 1 || index >= itemsCount + 2) {
                 return Container(
                   width: MediaQuery.of(context).size.width,
                   height: 64,
@@ -55,11 +56,10 @@ class SpringBoardTodayWidget extends StatelessWidget {
               }
 
               return Container(
-                child: SpringBoardTodayClockWidget(),
+                child: SpringBoardTodayCalendarWidget(),
               );
             },
-            //itemCount: 19,
-            itemCount:10 + 4,
+            itemCount: itemsCount + 4,
           ),
         ),
       ),
